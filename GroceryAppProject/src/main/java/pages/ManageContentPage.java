@@ -1,0 +1,54 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ManageContentPage {
+	WebDriver driver;
+	public ManageContentPage(WebDriver driver)
+	{
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	@FindBy(xpath="//i[@class='nav-icon fas fa-edit']")WebElement managecontent;
+	@FindBy(xpath="//p[text()='Manage News']")WebElement managenews;
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")WebElement newfield;
+	@FindBy(xpath="//textarea[@id='news']")WebElement enternews;
+	@FindBy(xpath="//button[@type='submit']")WebElement save;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alert;
+	public void clickingManageContent()
+	{
+		managecontent.click();
+	}
+	public void clickingManageNews()
+	{
+		managenews.click();
+	}
+	public void clickingNewField()
+	{
+		newfield.click();
+	}
+	public void enteringNews()
+	{
+		enternews.sendKeys("csk won the ipl trophy");
+	}
+	public void clickingSave()
+	{
+		save.click();
+	}
+	
+	public boolean alertMessageDisplayAfterSaving()
+	{
+	 return alert.isDisplayed();
+	}
+}
+	
+	
+
+
+
+
+
+
