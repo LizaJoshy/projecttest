@@ -27,13 +27,13 @@ public class ManageSliderPage {
 	{
 		newfield.click();
 	}
-	public void chooseFileField()
+	public void chooseFileField(String field)
 	{
-		choosefield.sendKeys("C:\\Users\\lizaj\\Downloads\\apple.jpeg");
+		choosefield.sendKeys(field);
 	}
-	public void clickingLinkField()
+	public void clickingLinkField(String linkfields)
 	{
-		linkfield.sendKeys("https://groceryapp.uniqassosiates.com/admin/Slider/add");
+		linkfield.sendKeys(linkfields);
 	}
 	public void clickingSave()
 	{

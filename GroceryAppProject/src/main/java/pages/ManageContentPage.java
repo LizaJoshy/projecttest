@@ -30,10 +30,16 @@ public class ManageContentPage {
 	{
 		newfield.click();
 	}
-	public void enteringNews()
-	{
-		enternews.sendKeys("csk won the ipl trophy");
+	public void enteringNews(String newss) {
+		enternews.sendKeys(newss);
+		// TODO Auto-generated method stub
+		
 	}
+	
+	//public void enteringNews1(String news)
+	//{
+		//enternews.sendKeys( news);
+	//}
 	public void clickingSave()
 	{
 		save.click();
@@ -43,7 +49,11 @@ public class ManageContentPage {
 	{
 	 return alert.isDisplayed();
 	}
-}
+	//public void enteringNews(String newss) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	
 

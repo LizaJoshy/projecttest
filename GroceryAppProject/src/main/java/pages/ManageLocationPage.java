@@ -30,24 +30,24 @@ public class ManageLocationPage {
 	{
 		newfield.click();
 	}
-	public void selectingCountry()
+	public void selectingCountry(String countryname)
 	{
 		Select select=new Select(countryfield);
-		select.selectByVisibleText("United Kingdom");
+		select.selectByVisibleText(countryname);
 
 	}
-	public void selectingstate()
+	public void selectingstate(String statename)
 	{
 		Select select=new Select(statefield);
-		select.selectByIndex(5);
+		select.selectByVisibleText(statename);
 	}
-	public void enteringLocation()
+	public void enteringLocation(String locations)
 	{
-		location.sendKeys("munnar");
+		location.sendKeys(locations);
 	}
-	public void enteringDeliveryCharge()
+	public void enteringDeliveryCharge(String charge)
 	{
-		deliverycharge.sendKeys("500");
+		deliverycharge.sendKeys(charge);
 	}
 	public void clickingSaveButton()
 	{
