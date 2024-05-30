@@ -7,6 +7,7 @@ import org.testng.annotations.Parameters;
 //import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
@@ -31,7 +32,7 @@ return input;
 	  loginpage.enterpasswordInPasswordField(passwordValue);
 	  loginpage.clickOnSignInButton();
 	  boolean isHomePageLoaded=loginpage.dashBoardCheck();
-	  Assert.assertTrue(isHomePageLoaded, "unable to login");
+	  Assert.assertTrue(isHomePageLoaded, Constants.ERRORMESSAGEFORUNABLETOLOGIN);
   }
   @Test//(description ="verify the user is not able to login with valid username and invalid password" )
   public void verifyUserIsAbleToLoginUsingValidUsernameAndInvalidPassword() throws IOException {

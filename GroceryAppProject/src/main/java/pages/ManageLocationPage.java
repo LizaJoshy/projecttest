@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtility;
+
 
 public class ManageLocationPage {
 	WebDriver driver;
@@ -32,8 +34,10 @@ public class ManageLocationPage {
 	}
 	public void selectingCountry(String countryname)
 	{
-		Select select=new Select(countryfield);
-		select.selectByVisibleText(countryname);
+		//Select select=new Select(countryfield);
+		//select.selectByVisibleText(countryname);
+		PageUtility p=new PageUtility();
+		p.selection(countryfield,countryname);
 
 	}
 	public void selectingstate(String statename)

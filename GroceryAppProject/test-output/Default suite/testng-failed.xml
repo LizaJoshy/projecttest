@@ -5,7 +5,7 @@
     <classes>
       <class name="testscripts.LoginTest">
         <methods>
-          <include name="verifyUserIsAbleToLoginUsingInValidUsernameAndInvalidPassword"/>
+          <include name="verifyUserIsAbleToLoginUsingValidCredentials"/>
           <include name="initializeMethod"/>
           <include name="afterMethod"/>
         </methods>
